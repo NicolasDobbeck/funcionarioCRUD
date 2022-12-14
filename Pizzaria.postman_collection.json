@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "447ea45e-8b4a-424f-be84-630f526c1ed1",
+		"name": "Pizzaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125797"
+	},
+	"item": [
+		{
+			"name": "CRUD-FUNCIONARIO",
+			"item": [
+				{
+					"name": "Endpoint para inseirir novo funcionario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Cleiton da bicicleta\",\n    \"email\": \"sonograu3@gmail.com\",\n    \"telefone\": \"(11)09833-0443\",\n    \"senha\": \"abc11\",\n    \"foto\": \"https://files.cercomp.ufg.br/weby/up/776/o/Prof_Marcos_Jose_da_Silva.jpe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para listar todod os funcionarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para buscar funcionario pelo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionario/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para excluir um funcionario existente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para atualizar um funcionario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Renato Jr\",\n    \"email\": \"juniorrenato@gmail.com\",\n    \"telefone\": \"(11)09023-1403\",\n    \"senha\": \"12junin\",\n    \"foto\": \"https://files.cercomp.ufg.br/weby/up/776/o/Prof_Marcos_Jose_da_Silva.jpe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionario/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Autenticação do funcionario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sonograu3@gmail.com\",\r\n    \"senha\": \"abc11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionario/autenticar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionario",
+								"autenticar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"juniorrenato@gmail.com\",\n    \"senha\": \"12junin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/funcionario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"funcionario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD-PIZZA",
+			"item": [
+				{
+					"name": "Endpoint para inseir uma pizza",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sabor\": \"Quatro Queijos\",\n    \"imagem\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para buscar pizza por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizza/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizza",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para listar todas as pizzas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para atualizar uma pizza",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sabor\": \"Portuguesa\",\n    \"imagem\": \"https://portalbcn.com.br/wp-content/uploads/2021/08/pizza-portuguesa.jpeg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizza/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizza",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint para excluir uma pizza",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizza/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizza",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD- TAMANHO_PIZZA",
+			"item": [
+				{
+					"name": "Endpoint para inserir uma novo tamanho de pizza",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tamanho\": \"Grande\",\n    \"preco\": 49.99\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/tamanhoPizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"tamanhoPizza"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD-INGREDIENTES",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ingredientes\": \"Tomate, cebola e Queijo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/ingrediente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"ingrediente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
